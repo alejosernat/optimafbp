@@ -1,0 +1,288 @@
+/* Colores */
+:root {
+    --color-primary: #000; /* Negro */
+    --color-secondary: #999; /* Gris medio */
+    --color-background: #f2f2f2; /* Gris claro */
+    --color-text: #333; /* Texto oscuro */
+    --color-transparent: transparent; /* Transparente */
+    --color-white: #fff; /* Blanco */
+    --color-scroll: rgba(0, 0, 0, 0.7); /* Negro con transparencia */
+}
+
+/* Aplicar la animación a la imagen superior */
+.header-bg {
+    animation: slideDown 0.5s ease-out; /* Duración y tipo de animación */
+}
+
+/* Modificaciones a Bootstrap */
+.navbar {
+    background-color: var(--color-transparent) !important; /* Hacer el menú transparente */
+    transition: background-color 0.3s ease; /* Transición suave */
+    height: 50px; /* Altura del menú reducida */
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url('5.jpg') !important; /* Imagen de fondo */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: var(--color-white) !important; /* Texto blanco */
+}
+
+.navbar-toggler {
+    border-color: var(--color-white) !important; /* Color del botón */
+}
+
+.navbar-toggler-icon {
+    background-color: var(--color-white) !important; /* Color del icono del botón */
+}
+
+/* Cambiar el color del menú cuando se hace scroll */
+.navbar-scrolled {
+    background-color: var(--color-primary) !important; /* Color del menú cuando se hace scroll */
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 12px auto; /* Aumentar espacio entre cada sección */
+    
+}
+.containerMenu {
+    width: 100%;
+ 
+    background-color: var(--color-scroll); /* Fondo con color diferente */
+    transition: background-color 0.5s ease; /* Transición suave del color */
+}
+
+/* Estilos del encabezado */
+header {
+    
+    color: var(--color-white);
+    
+    position: fixed; /* Menú fijo */
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del resto de los elementos */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('5.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Asegura que esté detrás del contenido del menú */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.3s ease; /* Transición de opacidad */
+}
+
+.header-bg.visible {
+    opacity: 1; /* Hace la imagen visible */
+}
+
+h1 {
+    margin: 0;
+    color: var(--color-white); /* Texto blanco */
+}
+
+/* Estilos de la sección de hero */
+#hero {
+    background-image: url('5.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* La imagen de fondo está fija */
+    color: var(--color-white);
+    text-align: center;
+    padding: 200px 0; /* Aumenta el tamaño */
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos de la sección de servicios */
+#services {
+    background-color: var(--color-background);
+    padding: 50px 0;
+    margin-top: 50px; /* Aumentar espacio entre esta sección y la anterior */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: var(--color-text);
+}
+
+.service-card p {
+    color: var(--color-secondary);
+}
+
+/* Estilos de la sección "¿Qué Hacemos?" */
+#about {
+    background-color: var(--color-background);
+    padding: 100px 0; /* Aumentar relleno */
+}
+
+#about p {
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+#about img {
+    display: block;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilos de la sección de Alianzas */
+#partners {
+    background-color: var(--color-background);
+    padding: 50px 0;
+}
+
+#partners p {
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* Estilos de la sección de Clientes */
+#clients {
+    background-color: var(--color-background);
+    padding: 50px 0;
+}
+
+.client-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.client-list-item {
+    margin: 10px;
+}
+
+.client-list-item img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Estilos de la sección de Contacto */
+#contact {
+    background-color: var(--color-background);
+    padding: 50px 0;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    color: var(--color-secondary);
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos cuando se hace scroll */
+body.scrolled header,
+body.scrolled .navbar {
+    background-color: var(--color-primary); /* Cambiar a un fondo sólido negro */
+}
+
+/* Estilos del header transparente */
+.transparent-header {
+    background-color: var(--color-transparent) !important;
+    box-shadow: none !important;
+    transition: background-color 0.5s ease; /* Transición suave del color */
+}
+
+/* Animación para desplazar la imagen de hero */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.navbar-scrolled {
+background-color: var(--color-transparent) !important;
+    box-shadow: none !important;
+}
+/* Ajustes para el navbar en dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar {
+        height: auto !important; /* Altura automática */
+       
+    }
+    .navbar-toggler {
+        border-color: var(--color-white) !important; /* Color del botón */
+    }
+
+    header {
+        height: auto !important; /* Altura automática */
+    }
+}
